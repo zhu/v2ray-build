@@ -22,7 +22,7 @@ jobs:
         
     - name: Goweight v2ray
       run: |
-        go get -u v2ray.com/core/...
+        go get -insecure -u v2ray.com/core/...
         cd $(go env GOPATH)/src/v2ray.com/core/main
         env CGO_ENABLED=0 GOOS=linux GOARCH=mipsle GOMIPS=softfloat goweight
 
